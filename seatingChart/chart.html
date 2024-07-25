@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seating Chart</title>
+    <style>
+        .header {
+            text-align: center;
+        }
+        .seating-chart {
+            display: grid;
+            grid-template-columns: repeat(3, 70px);
+            gap: 10px;
+            justify-content: center;
+            padding-top: 25px;
+        }
+        .seat {
+            width: 70px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+        .booked {
+            background: #FF0000;
+            cursor: not-allowed;
+            color: white;
+        }
+        .available {
+            background-color: #7FFF00;
+        }
+        .select-button {
+            text-align: center;
+            background-color: #007BFF;
+            color: white;
+            width: 210px;
+            padding: 10px;
+            border: 2px solid #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="header" class="header">Theater Layout</h1>
+    <div id="seating-chart" class="seating-chart">
+        <div class="seat available" onclick="bookSeat(0, 0)">A1</div>
+        <div class="seat available" onclick="bookSeat(0, 1)">A2</div>
+        <div class="seat available" onclick="bookSeat(0, 2)">A3</div>
+        <div class="seat available" onclick="bookSeat(1, 0)">B1</div>
+        <div class="seat available" onclick="bookSeat(1, 1)">B2</div>
+        <div class="seat available" onclick="bookSeat(1, 2)">B3</div>
+        <div class="seat available" onclick="bookSeat(2, 0)">C1</div>
+        <div class="seat available" onclick="bookSeat(2, 1)">C2</div>
+        <div class="seat available" onclick="bookSeat(2, 2)">C3</div>
+        <div id="select-button" class="select-button">Select Random Seat</div>
+    </div>
+    <script src="./seating_chart.js"></script>
+</body>
+</html>
